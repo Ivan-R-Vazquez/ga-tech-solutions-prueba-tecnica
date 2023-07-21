@@ -1,5 +1,9 @@
 # GaTechSolutionsPrueba
 
+Este es mi resultado de la prueba técnica para GA Tech Solutions.
+Favor de seguir la instalación descrita por Angular ya que esto ayudará a correr de forma eficiente el proyecto.
+Para la instalación de dependencias se utilizó Node v18.12.1.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
 ## Development server
