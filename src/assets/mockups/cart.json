@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "img_url": "https://static.vecteezy.com/system/resources/previews/009/399/398/original/old-vintage-book-clipart-design-illustration-free-png.png",
+    "item_name": "Book",
+    "short_description": "A story about a magician that loved a fairy",
+    "quantity": 1,
+    "price_without_tax": 399,
+    "tax": 63.84,
+    "shipping_fee": 35.68
+  },
+  {
+    "id": "2",
+    "img_url": "https://minimarketanamria.com/wp-content/uploads/2019/09/asbcbabscashghcag.png",
+    "item_name": "Wireless mouse",
+    "short_description": "Mouse gaming with RGD up to 200dps",
+    "quantity": 1,
+    "price_without_tax": 247.58,
+    "tax": 39.61,
+    "shipping_fee": 20.54
+  },
+  {
+    "id": "3",
+    "img_url": "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/keyboards/multi-keyboard-k380/gallery/k380-grey-gallery-01-ori.png?v=1",
+    "item_name": "Wireless keyboard",
+    "short_description": "Wireless keyboard with no latency",
+    "quantity": 1,
+    "price_without_tax": 234.41,
+    "tax": 37.51,
+    "shipping_fee": 20.54
+  },
+  {
+    "id": "4",
+    "img_url": "https://www.casadelrayo.cl/web/image/product.template/5288/image_1024?unique=07ed414",
+    "item_name": "USB adapter OTG micro USB",
+    "short_description": "Use your USB in your phone with this adapter",
+    "quantity": 1,
+    "price_without_tax": 146.53,
+    "tax": 23.44,
+    "shipping_fee": 15.2
+  }
+]

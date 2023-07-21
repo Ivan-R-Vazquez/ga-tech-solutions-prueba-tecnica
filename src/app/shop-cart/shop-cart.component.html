@@ -1,0 +1,44 @@
+<div class="cart-container">
+  <div class="cart">
+    <div class="cart-header">
+      <section class="header__title">
+        <span class="material-symbols-outlined"> shopping_cart </span>
+        <span>Order summary</span>
+      </section>
+      <button type="button" (click)="onRemoveCart()">Remove all</button>
+    </div>
+
+    <div class="cart-body">
+      <div *ngIf="cart.length === 0; else Cart" class="empty-cart">
+        <span class="material-symbols-outlined empty-cart__icon">
+          add_shopping_cart
+        </span>
+        <h3>Your cart is empty</h3>
+      </div>
+      <ng-template #Cart>
+        <div class="my-3" *ngFor="let product of cart">
+          <app-shop-cart-item [product]="product"></app-shop-cart-item>
+        </div>
+      </ng-template>
+    </div>
+
+    <div class="cart-total">
+      <section class="total__item">
+        <span>Subtotal</span>
+        <span>{{ subTotal | currency : "MXN" : "symbol-narrow" }}</span>
+      </section>
+      <section class="total__item">
+        <span>Shipping fees</span>
+        <span>{{ shippingFees | currency : "MXN" : "symbol-narrow" }}</span>
+      </section>
+      <section class="total__item">
+        <span>Taxes</span>
+        <span>{{ taxes | currency : "MXN" : "symbol-narrow" }}</span>
+      </section>
+      <section class="total__item fw-bold">
+        <span>Total (including tax)</span>
+        <span>{{ total | currency : "MXN" : "symbol-narrow" }}</span>
+      </section>
+    </div>
+  </div>
+</div>

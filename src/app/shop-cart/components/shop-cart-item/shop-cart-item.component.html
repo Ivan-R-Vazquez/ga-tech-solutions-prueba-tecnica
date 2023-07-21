@@ -1,0 +1,28 @@
+<div class="cart-item-container">
+  <div class="item__details">
+    <div class="item__img me-2">
+      <img class="img-fluid" [src]="product.img_url" alt="Product" />
+    </div>
+    <section class="item__info">
+      <span class="item__name">{{ product.item_name }}</span>
+      <span class="item__description">{{ product.short_description }}</span>
+    </section>
+  </div>
+
+  <div class="item__quantity">
+    <section class="item__increment">
+      <button class="mx-1" type="button" (click)="onRemoveProduct()">
+        <span class="material-symbols-outlined"> remove </span>
+      </button>
+      <span class="mx-1">{{ product.quantity }}</span>
+      <button class="mx-1" type="button" (click)="onAddProduct()">
+        <span class="material-symbols-outlined"> add </span>
+      </button>
+    </section>
+
+    <section class="item__total ms-1">
+      <span>{{ total | currency : "MXN" : "symbol-narrow" }}</span>
+      <span class="material-symbols-outlined"> delete </span>
+    </section>
+  </div>
+</div>

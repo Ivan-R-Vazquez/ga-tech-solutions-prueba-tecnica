@@ -1,0 +1,34 @@
+[
+  {
+    "item_name": "Book",
+    "short_description": "A story about a magician that loved a fairy",
+    "quantity": 1,
+    "price_without_tax": 399,
+    "tax": 63.84,
+    "shipping_fee": 35.68
+  },
+  {
+    "item_name": "Wireless mouse",
+    "short_description": "Mouse gaming with RGD up to 200dps",
+    "quantity": 1,
+    "price_without_tax": 247.58,
+    "tax": 39.61,
+    "shipping_fee": 20.54
+  },
+  {
+    "item_name": "Wireless keyboard",
+    "short_description": "Wireless keyboard with no latency",
+    "quantity": 1,
+    "price_without_tax": 234.41,
+    "tax": 37.51,
+    "shipping_fee": 20.54
+  },
+  {
+    "item_name": "USB adapter OTG micro USB",
+    "short_description": "Use your USB in your phone with this adapter",
+    "quantity": 1,
+    "price_without_tax": 146.53,
+    "tax": 23.44,
+    "shipping_fee": 15.2
+  }
+]
