@@ -1,0 +1,19 @@
+<div class="card-container">
+  <div class="card-type__logo">
+    <img
+      class="img-fluid"
+      src="https://1000marcas.net/wp-content/uploads/2019/12/VISA-Logo.png"
+      alt="Card type"
+    />
+  </div>
+  <div class="card-number">
+    <span>
+      {{ cardInfo.cardNumber | hideCardNumber | cardNumberFormat }}
+    </span>
+  </div>
+  <div class="card-holder-name">
+    <span>
+      {{ cardInfo.holderName }}
+    </span>
+  </div>
+</div>

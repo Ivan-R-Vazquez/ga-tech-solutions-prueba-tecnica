@@ -6,8 +6,13 @@ const routes: Routes = [
   {
     path: 'shop-cart',
     loadChildren: () =>
-      import('./shop-cart/shop-cart.module').then(
-        (m) => m.ShopCartModule
+      import('./shop-cart/shop-cart.module').then((m) => m.ShopCartModule),
+  },
+  {
+    path: 'credit-card',
+    loadChildren: () =>
+      import('./credit-card/credit-card.module').then(
+        (m) => m.CreditCardModule
       ),
   },
   { path: '**', pathMatch: 'full', redirectTo: 'shop-cart' },

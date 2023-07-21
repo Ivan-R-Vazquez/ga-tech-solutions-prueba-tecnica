@@ -28,4 +28,8 @@ export class ShopCartItemComponent implements OnInit {
     newProduct.quantity--;
     this.shopCartService.removeProduct(newProduct).subscribe();
   }
+
+  onDeleteProduct() {
+    this.shopCartService.removeOneFromCart(this.product.id).subscribe();
+  }
 }

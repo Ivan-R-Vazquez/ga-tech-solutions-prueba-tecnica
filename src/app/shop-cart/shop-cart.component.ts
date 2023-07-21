@@ -33,6 +33,6 @@ export class ShopCartComponent implements OnInit {
   }
 
   onRemoveCart() {
-    this.shopCartService.removeCart().subscribe();
+    this.shopCartService.removeAllCart().subscribe();
   }
 }

@@ -1,0 +1,91 @@
+.credit-card-container {
+  height: 100%;
+  padding: 1.5rem;
+  color: #ffffff;
+  background-color: #1581ed;
+  overflow-y: auto;
+}
+
+form {
+  .form-error {
+    color: #ff0000;
+  }
+}
+
+.cvv-info-container {
+  position: relative;
+  transition: 0.5s;
+  display: flex;
+
+  .cvv-info-icon {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .cvv-info {
+    position: absolute;
+    left: 30px;
+    top: -28px;
+    width: 200px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  &:hover .cvv-info {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.input-card {
+  color: #ffffff;
+  border: 0;
+  background-color: #126bc7;
+
+  &__number {
+    color: #ffffff;
+    background-color: #3e92ec;
+    border-color: #4aa4f9;
+    box-shadow: 0 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+.btn__confirm {
+  width: 100%;
+  color: #1581ed;
+  font-weight: bold;
+  background-color: #ffffff;
+
+  &:hover,
+  &:active {
+    color: #ffffff;
+    background-color: #1581ed;
+    border: 2px solid #ffffff;
+  }
+}
+
+.btn__cancel {
+  width: 100%;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+
+  &:hover,
+  &:active {
+    color: #1581ed;
+    background-color: #ffffff;
+    border: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .cvv-info {
+    left: -80px !important;
+    top: unset !important;
+    bottom: 20px;
+  }
+}

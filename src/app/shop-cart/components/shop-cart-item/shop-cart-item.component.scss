@@ -38,10 +38,7 @@
     display: flex;
     align-items: center;
 
-    button {
-      display: flex;
-      padding: 2px;
-      border: 0;
+    .item-button {
       border-radius: 1rem;
       background-color: #86b7fe24;
 
@@ -51,8 +48,20 @@
     }
   }
 
+  .item-button {
+    display: flex;
+    padding: 2px;
+    border: 0;
+  }
+
   .item__total {
     display: flex;
     align-items: center;
+
+    .item-button {
+      span {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
   }
 }

@@ -22,23 +22,25 @@
       </ng-template>
     </div>
 
+    <hr />
+
     <div class="cart-total">
-      <section class="total__item">
+      <div class="total__item">
         <span>Subtotal</span>
         <span>{{ subTotal | currency : "MXN" : "symbol-narrow" }}</span>
-      </section>
-      <section class="total__item">
+      </div>
+      <div class="total__item">
         <span>Shipping fees</span>
         <span>{{ shippingFees | currency : "MXN" : "symbol-narrow" }}</span>
-      </section>
-      <section class="total__item">
+      </div>
+      <div class="total__item">
         <span>Taxes</span>
         <span>{{ taxes | currency : "MXN" : "symbol-narrow" }}</span>
-      </section>
-      <section class="total__item fw-bold">
+      </div>
+      <div class="total__item fw-bold">
         <span>Total (including tax)</span>
         <span>{{ total | currency : "MXN" : "symbol-narrow" }}</span>
-      </section>
+      </div>
     </div>
   </div>
 </div>

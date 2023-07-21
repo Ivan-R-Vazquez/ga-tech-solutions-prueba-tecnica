@@ -15,6 +15,11 @@ export class ShopCartService {
 
   constructor(private http: HttpClient) {}
 
+  private get productsCopy() {
+    const products = this.cartShopStore.getValue();
+    return products.map((product) => ({ ...product }));
+  }
+
   getShopCart() {
     return this.http
       .get<Product[]>('assets/mockups/cart.json')
@@ -22,8 +27,7 @@ export class ShopCartService {
   }
 
   addProduct(newProduct: Product) {
-    const products = this.cartShopStore.getValue();
-    const newProducts = products.map((product) => ({ ...product }));
+    const newProducts = this.productsCopy;
     const indexProduct = newProducts.findIndex(
       (product) => product.id === newProduct.id
     );
@@ -38,8 +42,7 @@ export class ShopCartService {
   }
 
   removeProduct(newProduct: Product) {
-    const products = this.cartShopStore.getValue();
-    const newProducts = products.map((product) => ({ ...product }));
+    const newProducts = this.productsCopy;
     const indexProduct = newProducts.findIndex(
       (product) => product.id === newProduct.id
     );
@@ -57,7 +60,20 @@ export class ShopCartService {
     );
   }
 
-  removeCart() {
+  removeOneFromCart(id: string) {
+    const newProducts = this.productsCopy;
+    const indexProduct = newProducts.findIndex((product) => product.id === id);
+    if (indexProduct >= 0) {
+      newProducts.splice(indexProduct, 1);
+    } else {
+      console.error("This product doesn't exist");
+    }
+    return of(newProducts).pipe(
+      tap((products) => this.cartShopStore.next(products))
+    );
+  }
+
+  removeAllCart() {
     return of([]).pipe(tap((cart) => this.cartShopStore.next(cart)));
   }
 }
